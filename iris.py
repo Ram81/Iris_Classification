@@ -71,14 +71,21 @@ for name, model in models:
 	msg = "%s: %f (%f)" % (name,cv_results.mean(),cv_results.std())
 	print(msg)
 	
+#Comparing Algorithms
+fig = plt.figure()
+fig.suptitle("Algorithm Comparison")
+ax = fig.add_subplot(111)
+plt.boxplot(result)
+ax.set_xticklabels(names)
+plt.show()
 
-
-
-
-
-
-
-
+#make predictions
+knn = KNeighborsClassifier()
+knn.fit(X_Train, Y_Train)
+prediction = knn.predict(X_Validate)
+print(accuracy_score(Y_Validate,prediction))
+print(confusion_matrix(Y_Validate,prediction))
+print(classification_report(Y_Validate,prediction))
 
 
 
