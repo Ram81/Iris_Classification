@@ -28,4 +28,6 @@ print(dataset.describe())
 print(dataset.groupby('class').size())
 
 #Data Visualization
-
+#box & whisker plot
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
