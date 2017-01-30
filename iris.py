@@ -86,14 +86,3 @@ prediction = knn.predict(X_Validate)
 print(accuracy_score(Y_Validate,prediction))
 print(confusion_matrix(Y_Validate,prediction))
 print(classification_report(Y_Validate,prediction))
-
-
-
-
-
-
-
-
-
-
-
